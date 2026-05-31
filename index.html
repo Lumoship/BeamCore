@@ -12,7 +12,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%230ea5e9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50' y='72' font-family='JetBrains Mono, monospace' font-weight='700' font-size='66' text-anchor='middle' fill='white'%3EL%3C/text%3E%3C/svg%3E">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeamCore — Lumoship | Beam Structural Analysis</title>
+    <title>Free Online Marine Beam Calculator | BeamCore by Lumoship</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
@@ -347,6 +347,245 @@
         @media (max-width: 768px) {
             .lumoship-nav-links { gap: 0.75rem; }
             .lumoship-nav-link { font-size: 0.75rem; }
+        }
+
+    
+        /* ============ SEO CONTENT STYLES ============ */
+        .seo-hero {
+            background: linear-gradient(180deg, #0f141f 0%, #0a0e17 100%);
+            padding: 4rem 1.5rem 3rem;
+            border-bottom: 1px solid #1e2536;
+        }
+        .seo-hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .seo-hero-title {
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            font-weight: 700;
+            color: #f8fafc;
+            margin: 0 0 1rem;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+        }
+        .seo-hero-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(0.95rem, 1.3vw, 1.125rem);
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        .seo-hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .seo-feature-pill {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #60a5fa;
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            font-size: 0.825rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+        }
+        .seo-hero-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+            color: white;
+            text-decoration: none;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: transform 200ms, box-shadow 200ms;
+        }
+        .seo-hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+        }
+        
+        .seo-content {
+            background: #0a0e17;
+            padding: 4rem 1.5rem;
+            border-top: 1px solid #1e2536;
+        }
+        .seo-content-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .seo-article {
+            margin-bottom: 3rem;
+        }
+        .seo-article h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #f8fafc;
+            margin: 0 0 1.25rem;
+            letter-spacing: -0.01em;
+        }
+        .seo-article h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #f8fafc;
+            margin: 0 0 0.5rem;
+        }
+        .seo-article p {
+            color: #cbd5e1;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 0 0 1rem;
+        }
+        .seo-article ul {
+            color: #cbd5e1;
+            font-size: 1rem;
+            line-height: 1.8;
+            padding-left: 1.25rem;
+            margin: 0 0 1rem;
+        }
+        .seo-article strong {
+            color: #f8fafc;
+        }
+        
+        .seo-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+        .seo-step {
+            display: flex;
+            gap: 1.25rem;
+            padding: 1.25rem;
+            background: #0f141f;
+            border: 1px solid #1e2536;
+            border-radius: 8px;
+        }
+        .seo-step-number {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .seo-step-content p {
+            margin-bottom: 0;
+        }
+        
+        .seo-scenarios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .seo-scenario {
+            background: #0f141f;
+            border: 1px solid #1e2536;
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+        .seo-scenario h3 {
+            color: #60a5fa;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .seo-scenario p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+        
+        .seo-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .seo-comparison-item {
+            background: #0f141f;
+            border: 1px solid #1e2536;
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+        .seo-comparison-item h3 {
+            color: #f8fafc;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .seo-comparison-item p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+        
+        .seo-faq {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        .seo-faq-item {
+            background: #0f141f;
+            border: 1px solid #1e2536;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            transition: background 200ms;
+        }
+        .seo-faq-item[open] {
+            background: #131a2a;
+        }
+        .seo-faq-item summary {
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: #f8fafc;
+            font-size: 1rem;
+            list-style: none;
+            position: relative;
+            padding-right: 2rem;
+        }
+        .seo-faq-item summary::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #60a5fa;
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: transform 200ms;
+        }
+        .seo-faq-item[open] summary::after {
+            transform: translateY(-50%) rotate(45deg);
+        }
+        .seo-faq-item p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 1rem 0 0;
+        }
+        
+        .seo-article-cta {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 3rem 1.5rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(14, 165, 233, 0.05));
+            border: 1px solid #1e2536;
+            border-radius: 12px;
         }
 
     </style>
@@ -719,6 +958,297 @@
         </div>
     </div>
 </div>
+
+
+    <!-- ============ SEO CONTENT ============ -->
+    <section class="seo-content">
+        <div class="seo-content-inner">
+            
+            <article class="seo-article">
+                <h2>The Marine Beam Calculator Built for Naval Architects</h2>
+                <p>
+                    BeamCore is part of <strong>Lumoship</strong>, a modern marine structural engineering 
+                    software suite designed for naval architects, ship designers, and marine structural 
+                    engineers. While general-purpose beam calculators exist, BeamCore is purpose-built 
+                    for the unique requirements of marine and shipbuilding applications.
+                </p>
+                <p>
+                    Every feature, profile library, and material grade in BeamCore reflects the practical 
+                    needs of marine engineering practice — from the EN 10067 Holland Profile (HP) catalog 
+                    commonly used in stiffener design, to shipbuilding steel grades AH32 and AH36 specified 
+                    by classification societies including DNV, Lloyd's Register, Bureau Veritas, and RINA.
+                </p>
+            </article>
+
+            <article class="seo-article">
+                <h2>How to Use BeamCore</h2>
+                <p>The workflow is designed to mirror engineering practice:</p>
+                
+                <div class="seo-steps">
+                    <div class="seo-step">
+                        <div class="seo-step-number">1</div>
+                        <div class="seo-step-content">
+                            <h3>Setup</h3>
+                            <p>Enter project information, designer name, and analysis date. These details 
+                            appear on the exported PDF calculation sheet for documentation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="seo-step">
+                        <div class="seo-step-number">2</div>
+                        <div class="seo-step-content">
+                            <h3>Define Geometry</h3>
+                            <p>Set the beam length and select your profile. Choose from Flat Bar (FB), 
+                            L-Profile, T-Profile, or pick from the complete HP catalog per EN 10067. 
+                            Add an attached plate if modeling a stiffened panel.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="seo-step">
+                        <div class="seo-step-number">3</div>
+                        <div class="seo-step-content">
+                            <h3>Material & Safety</h3>
+                            <p>Select steel grade (A, AH32, AH36) and a safety factor. Allowable stress 
+                            is calculated automatically based on the yield strength and chosen factor.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="seo-step">
+                        <div class="seo-step-number">4</div>
+                        <div class="seo-step-content">
+                            <h3>Supports</h3>
+                            <p>Add any number of supports at any position. Choose between pinned 
+                            (vertical restraint), fixed (vertical + rotation), or roller. BeamCore handles 
+                            statically determinate and indeterminate structures.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="seo-step">
+                        <div class="seo-step-number">5</div>
+                        <div class="seo-step-content">
+                            <h3>Loads</h3>
+                            <p>Apply point loads, uniformly distributed loads (UDL), or applied moments. 
+                            Mix and match load types. Define location for point loads and start/end 
+                            positions for UDLs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="seo-step">
+                        <div class="seo-step-number">6</div>
+                        <div class="seo-step-content">
+                            <h3>Analyze</h3>
+                            <p>Click "Run Analysis". BeamCore computes reactions, shear forces, bending 
+                            moments, and deflections using the Direct Stiffness Method. Results appear 
+                            as numerical values and diagrams within seconds.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="seo-article">
+                <h2>Common Analysis Scenarios</h2>
+                
+                <div class="seo-scenarios">
+                    <div class="seo-scenario">
+                        <h3>Simply Supported Beam — UDL</h3>
+                        <p>Classic deck beam or stiffener under uniform pressure. Two pinned/roller 
+                        supports at the ends, UDL across the span. BeamCore returns the well-known 
+                        wL²/8 maximum moment at midspan.</p>
+                    </div>
+                    
+                    <div class="seo-scenario">
+                        <h3>Cantilever — Point Load</h3>
+                        <p>Bracket structure or overhanging member. One fixed support, point load at 
+                        the free end. Maximum moment occurs at the fixed support (PL).</p>
+                    </div>
+                    
+                    <div class="seo-scenario">
+                        <h3>Continuous Beam — Multi-Span</h3>
+                        <p>Continuous deck longitudinal over multiple frames. Add three or more 
+                        supports, apply UDL. Hyperstatic — BeamCore solves automatically.</p>
+                    </div>
+                    
+                    <div class="seo-scenario">
+                        <h3>Propped Cantilever</h3>
+                        <p>One end fixed (e.g., welded to a bulkhead), other end on a support. Combines 
+                        fixed-end characteristics with simple span behavior. Single solver step.</p>
+                    </div>
+                    
+                    <div class="seo-scenario">
+                        <h3>Beam with Mixed Loads</h3>
+                        <p>Real-world combinations — equipment as point loads, hydrostatic pressure as 
+                        UDL, plus applied moments at hatch corners. BeamCore superposes them all.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="seo-article">
+                <h2>Why BeamCore vs. Generic Beam Calculators?</h2>
+                
+                <div class="seo-comparison">
+                    <div class="seo-comparison-item">
+                        <h3>Marine-First Profile Library</h3>
+                        <p>Built around the EN 10067 HP (Holland Profile) catalog — the standard 
+                        bulb-flat stiffener used in shipbuilding worldwide. Generic calculators don't 
+                        include these.</p>
+                    </div>
+                    
+                    <div class="seo-comparison-item">
+                        <h3>Shipbuilding Steel Grades</h3>
+                        <p>AH32 and AH36 grades pre-loaded with their correct ReH yield values. 
+                        Standard structural engineering tools use civil grades (S235, S355).</p>
+                    </div>
+                    
+                    <div class="seo-comparison-item">
+                        <h3>Class Society Awareness</h3>
+                        <p>The profile catalog and grade selections reflect classification society 
+                        requirements (DNV, Lloyd's Register, Bureau Veritas, RINA, Türk Loydu).</p>
+                    </div>
+                    
+                    <div class="seo-comparison-item">
+                        <h3>Attached Plate Modeling</h3>
+                        <p>Quickly model stiffened panels by attaching an effective plate width to the 
+                        profile. Critical for ship deck and bottom structure analysis.</p>
+                    </div>
+                    
+                    <div class="seo-comparison-item">
+                        <h3>Free for 2026</h3>
+                        <p>No sign-up, no credit card, no usage limits. Lumoship is in early access 
+                        throughout 2026, building real value before charging.</p>
+                    </div>
+                    
+                    <div class="seo-comparison-item">
+                        <h3>Modern, Browser-Based</h3>
+                        <p>Nothing to install. Works on any device with a browser. Results computed 
+                        server-side using Python/NumPy for accuracy and reliability.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="seo-article">
+                <h2>About Lumoship</h2>
+                <p>
+                    <strong>BeamCore is one of multiple tools in the Lumoship suite</strong> — a software 
+                    platform built specifically for marine structural engineering. The vision is a 
+                    comprehensive, modern toolkit covering everything from concept design to 
+                    class-compliant scantling analysis.
+                </p>
+                <p>Currently available:</p>
+                <ul>
+                    <li><strong>BeamCore</strong> — Beam structural analysis (this tool)</li>
+                    <li><strong>SectionPro</strong> — Section properties calculator for marine profiles</li>
+                </ul>
+                <p>In development for 2026:</p>
+                <ul>
+                    <li><strong>NODAL</strong> — Beam-based grillage solver for hatch covers, decks, 
+                    bulkheads, and stiffened panels</li>
+                    <li><strong>Lumoship Midship</strong> — Multi-class scantling tool with full rule 
+                    check support for DNV, Lloyd's Register, Bureau Veritas, and RINA</li>
+                </ul>
+                <p>
+                    Lumoship is founded by <strong>Ebubekir Akarsu</strong>, a structural-focused naval 
+                    architect with 7+ years of experience across European and Turkish marine engineering 
+                    firms. The platform reflects real practitioner needs — built by an engineer, for engineers.
+                </p>
+                <p>
+                    Learn more at <a href="https://lumoship.org" style="color: var(--accent-bright);">lumoship.org</a>.
+                </p>
+            </article>
+
+            <article class="seo-article">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="seo-faq">
+                    <details class="seo-faq-item">
+                        <summary>Is BeamCore really free?</summary>
+                        <p>Yes, BeamCore is completely free during 2026. No sign-up required, no usage 
+                        limits, no hidden charges. Starting 2027, paid plans will become available for 
+                        advanced features, but the core calculator will remain accessible.</p>
+                    </details>
+                    
+                    <details class="seo-faq-item">
+                        <summary>What calculation method does BeamCore use?</summary>
+                        <p>BeamCore implements the <strong>Direct Stiffness Method</strong> based on 
+                        Euler-Bernoulli beam theory. Calculations are performed server-side using Python 
+                        and NumPy for numerical accuracy. Each beam is meshed into multiple elements 
+                        (typically L/40 maximum element length) for high-resolution results.</p>
+                    </details>
+                    
+                    <details class="seo-faq-item">
+                        <summary>Can I analyze multi-span continuous beams?</summary>
+                        <p>Yes. BeamCore handles any number of supports at any position along the beam. 
+                        Two-span, three-span, or more continuous beams are supported. The solver 
+                        automatically handles statically indeterminate structures.</p>
+                    </details>
+                    
+                    <details class="seo-faq-item">
+                        <summary>Which profile types are supported?</summary>
+                        <p>BeamCore supports four profile types: Flat Bar (FB), L-Profile (angle), 
+                        T-Profile, and Holland Profile (HP) per the EN 10067 catalog. The complete HP 
+                        range from HP 60×4 to HP 400×16 is available with tabulated section properties.</p>
+                    </details>
+                    
+                    <details class="seo-faq-item">
+                        <summary>What steel grades are available?</summary>
+                        <p>Three shipbuilding steel grades are pre-loaded with their correct yield 
+                        strengths (ReH) per classification society requirements: Grade A (ReH = 235 N/mm²), 
+                        AH32 (315 N/mm²), and AH36 (355 N/mm²). The elastic modulus is set to 206 GPa 
+                        (per IACS standards).</p>
+                    </details>
+                    
+                    <details class="seo-faq-item">
+                        <summary>Can I export results as PDF?</summary>
+                        <p>Yes. BeamCore generates a complete PDF calculation sheet including project 
+                        information, geometry, loads, supports, analysis results, and diagrams. The PDF 
+                        is suitable for design submittals and project records.</p>
+                    </details>
+                    
+                    <details class="seo-faq-item">
+                        <summary>How accurate are the results?</summary>
+                        <p>BeamCore uses high-precision numerical methods. Results match analytical 
+                        solutions to within machine precision for standard cases (simply supported, 
+                        cantilever, etc.). The solver has been validated against textbook examples 
+                        and finite element references.</p>
+                    </details>
+                    
+                    <details class="seo-faq-item">
+                        <summary>Does BeamCore work offline?</summary>
+                        <p>No. BeamCore is a browser-based tool that computes results server-side. 
+                        An internet connection is required. The server is hosted on Railway with 99.9% 
+                        uptime. Results are returned within seconds for typical beam problems.</p>
+                    </details>
+                    
+                    <details class="seo-faq-item">
+                        <summary>Can I save and load my projects?</summary>
+                        <p>Within a single session, you can save and load beam cases using the "Saved 
+                        Cases" feature. Browser refresh clears these. Future versions will support 
+                        persistent project storage with user accounts.</p>
+                    </details>
+                    
+                    <details class="seo-faq-item">
+                        <summary>Who is BeamCore for?</summary>
+                        <p>BeamCore is designed for <strong>naval architects, marine structural 
+                        engineers, ship designers, and shipbuilding draftsmen</strong>. It's also 
+                        useful for academic purposes — marine engineering students learning beam 
+                        analysis on real-world ship profiles.</p>
+                    </details>
+                </div>
+            </article>
+
+            <article class="seo-article seo-article-cta">
+                <h2>Ready to Start?</h2>
+                <p>
+                    Use BeamCore for your next ship structural analysis project. No sign-up, no install, 
+                    no cost during 2026.
+                </p>
+                <a href="#tool-start" class="seo-hero-cta">Start Calculating ↑</a>
+                <p style="margin-top: 2rem; opacity: 0.7; font-size: 0.875rem;">
+                    Have questions or feedback? Email <a href="mailto:contact@lumoship.org" style="color: var(--accent-bright);">contact@lumoship.org</a>
+                </p>
+            </article>
+        </div>
+    </section>
+
 
 <footer class="ea-footer"><div class="ea-footer-inner"><div class="ea-footer-signature">Created by <strong>Ebubekir Akarsu</strong> — Structural Engineer</div><div class="ea-footer-meta">© 2025-2026 All rights reserved</div></div></footer>
 
@@ -1094,8 +1624,18 @@ async function solveBeam(){
             return null;
         }
         
-        // Return results in format expected by drawAllDiagrams
-        return data.results;
+        // Normalize backend field names to match frontend expectations
+        const results = data.results;
+        if(results.reactions){
+            results.reactions = results.reactions.map(r => ({
+                pos: r.pos,
+                type: r.type,
+                R: r.R_kN !== undefined ? r.R_kN : r.R,
+                M: r.M_kNm !== undefined ? r.M_kNm : r.M
+            }));
+        }
+        
+        return results;
         
     } catch(err) {
         console.error('Network error:', err);
