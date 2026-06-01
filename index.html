@@ -306,17 +306,117 @@
             letter-spacing: 0.06em;
         }
         .lumoship-nav-links {
+            display: none;
+        }
+        
+        /* NEW MINIMAL NAVBAR */
+        .nav-left {
             display: flex;
-            gap: 2rem;
             align-items: center;
         }
-        .lumoship-nav-link {
+        
+        .nav-context {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(0.7rem, 0.8vw, 0.75rem);
+            color: #64748b;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding-left: clamp(0.75rem, 1.5vw, 1rem);
+            margin-left: clamp(0.75rem, 1.5vw, 1rem);
+            border-left: 1px solid #1e2536;
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: clamp(0.75rem, 1.5vw, 1.25rem);
+        }
+        
+        .nav-back {
             color: #94a3b8;
             text-decoration: none;
             font-family: 'Inter', sans-serif;
-            font-size: 0.875rem;
+            font-size: clamp(0.8rem, 0.9vw, 0.875rem);
             font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
             transition: color 200ms;
+        }
+        
+        .nav-back:hover { color: #f8fafc; }
+        .nav-back-arrow { font-size: 1em; }
+        
+        .user-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.75rem 0.35rem 0.35rem;
+            background: rgba(59, 130, 246, 0.06);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            border-radius: 999px;
+            text-decoration: none;
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.825rem;
+            font-weight: 500;
+            transition: all 200ms;
+        }
+        
+        .user-badge:hover {
+            background: rgba(59, 130, 246, 0.12);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+        
+        .user-badge-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: white;
+            letter-spacing: -0.02em;
+            overflow: hidden;
+        }
+        
+        .user-badge-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .user-badge-name {
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .user-badge-login {
+            padding: 0.45rem 0.95rem;
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: white;
+        }
+        
+        .user-badge-login:hover {
+            background: #60a5fa;
+            border-color: #60a5fa;
+        }
+        
+        @media (max-width: 640px) {
+            .nav-back-text { display: none; }
+            .user-badge-name { display: none; }
+            .nav-context { display: none; }
+        }
+        
+        .lumoship-nav-link {
+            display: none;
         }
         .lumoship-nav-link:hover { color: #f8fafc; }
         .lumoship-breadcrumb {
@@ -345,8 +445,7 @@
             font-weight: 500;
         }
         @media (max-width: 768px) {
-            .lumoship-nav-links { gap: 0.75rem; }
-            .lumoship-nav-link { font-size: 0.75rem; }
+            .lumoship-breadcrumb { display: none; }
         }
 
     
@@ -595,17 +694,25 @@
     <!-- ========== LUMOSHIP UNIFIED NAVIGATION ========== -->
     <nav class="lumoship-nav">
         <div class="lumoship-nav-inner">
-            <a href="https://lumoship.org" class="lumoship-nav-logo">
-                <div class="lumoship-nav-logo-mark">L</div>
-                <span class="lumoship-nav-logo-text">LUMOSHIP</span>
-            </a>
-            <div class="lumoship-nav-links">
-                <a href="https://lumoship.org" class="lumoship-nav-link">Home</a>
-                <a href="https://lumoship.org/products.html" class="lumoship-nav-link">Products</a>
-                <a href="https://lumoship.org/pricing.html" class="lumoship-nav-link">Pricing</a>
-                <a href="https://lumoship.org/about.html" class="lumoship-nav-link">About</a>
-                <a href="https://lumoship.org/contact.html" class="lumoship-nav-link">Contact</a>
-                <a href="https://lumoship.org/login.html" class="lumoship-nav-link">Login</a>
+            <div class="nav-left">
+                <a href="https://lumoship.org" class="lumoship-nav-logo">
+                    <div class="lumoship-nav-logo-mark">L</div>
+                    <span class="lumoship-nav-logo-text">LUMOSHIP</span>
+                </a>
+                <span class="nav-context">BeamCore</span>
+            </div>
+            <div class="nav-right">
+                <a href="https://lumoship.org/workspace.html" class="nav-back">
+                    <span class="nav-back-arrow">←</span>
+                    <span class="nav-back-text">Workspace</span>
+                </a>
+                <a href="https://lumoship.org/workspace.html" id="userBadge" class="user-badge" style="display: none;">
+                    <span id="userBadgeAvatar" class="user-badge-avatar">L</span>
+                    <span id="userBadgeName" class="user-badge-name">Account</span>
+                </a>
+                <a href="https://lumoship.org/workspace.html" id="loginBadge" class="user-badge user-badge-login" style="display: none;">
+                    <span>Sign in</span>
+                </a>
             </div>
         </div>
     </nav>
@@ -2318,6 +2425,49 @@ window.addEventListener('resize',()=>{ drawPreview(); if(lastResults&&document.g
     window.modalZoom=function(dir){ if(dir===0){modalScale=1;panX=0;panY=0;} else modalScale=Math.max(ZOOM_MIN,Math.min(ZOOM_MAX,modalScale+dir*ZOOM_STEP)); applyModal(); };
     document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeBeamFullscreen(); });
 })();
+</script>
+
+<!-- Navbar auth state check -->
+<script type="module">
+    import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+    
+    const SUPABASE_URL = 'https://mjatuomzchnssivvmnsc.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1qYXR1b216Y2huc3NpdnZtbnNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAxNDU0NDMsImV4cCI6MjA5NTcyMTQ0M30.1UH6iJ-ews6YBZxFTU5_3t7T7RRb8T049M7wDkOu584';
+    
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    
+    (async () => {
+        try {
+            const { data: { session } } = await supabase.auth.getSession();
+            
+            const userBadge = document.getElementById('userBadge');
+            const loginBadge = document.getElementById('loginBadge');
+            
+            if (session && session.user) {
+                const user = session.user;
+                const meta = user.user_metadata || {};
+                const displayName = meta.full_name || meta.name || user.email.split('@')[0];
+                const firstName = displayName.split(' ')[0];
+                
+                const avatarEl = document.getElementById('userBadgeAvatar');
+                if (meta.avatar_url || meta.picture) {
+                    avatarEl.innerHTML = `<img src="${meta.avatar_url || meta.picture}" alt="">`;
+                } else {
+                    avatarEl.textContent = (firstName[0] || 'U').toUpperCase();
+                }
+                
+                document.getElementById('userBadgeName').textContent = firstName;
+                userBadge.style.display = 'inline-flex';
+                loginBadge.style.display = 'none';
+            } else {
+                userBadge.style.display = 'none';
+                loginBadge.style.display = 'inline-flex';
+            }
+        } catch (err) {
+            console.warn('Auth check failed:', err);
+            document.getElementById('loginBadge').style.display = 'inline-flex';
+        }
+    })();
 </script>
 </body>
 </html>
