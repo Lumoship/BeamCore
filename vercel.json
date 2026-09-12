@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://lumoship.org/beam/",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://lumoship.org/beam/",
+      "permanent": true
+    }
+  ]
+}
